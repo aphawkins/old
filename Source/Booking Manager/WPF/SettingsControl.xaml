@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="BookMan.WPF.SettingsControl"
+             x:ClassModifier="internal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" 
+             d:DesignWidth="640">
+    <Grid>
+        <Grid Name="grid1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="178*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <TextBox Height="23" HorizontalAlignment="Stretch" Margin="0,8,0,0" Name="textDBPath" VerticalAlignment="Top" Grid.Column="1" />
+            <Label Content="Database" Height="28" HorizontalAlignment="Stretch" Margin="0,6,0,0" Name="label1" VerticalAlignment="Top" />
+            <Label Content="Database Version" Height="28" HorizontalAlignment="Stretch" Margin="0,82,0,0" Name="label2" VerticalAlignment="Top" />
+            <Label Content="Application Version" Height="28" HorizontalAlignment="Stretch" Margin="0,110,0,0" Name="label3" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Stretch" Margin="0,82,0,0" Name="labelDBVersion" VerticalAlignment="Top" Grid.Column="1" />
+            <Label Height="28" HorizontalAlignment="Stretch" Margin="0,110,0,0" Name="labelAppVersion" VerticalAlignment="Top" Grid.Column="1" />
+        </Grid>
+    </Grid>
+</UserControl>

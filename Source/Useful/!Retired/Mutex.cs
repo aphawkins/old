@@ -1,0 +1,1 @@
+GC.KeepAlive(mutex); 

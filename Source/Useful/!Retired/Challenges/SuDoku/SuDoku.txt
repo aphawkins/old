@@ -1,0 +1,1 @@
+To solve a Su Doku puzzle, every digit from 1 to 9 must appear in each of the nine vertical columns, in each of the nine horizontal rows, and in each of the nine boxes.

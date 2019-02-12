@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Andrew Hawkins (Home) -->
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="UsefulConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SchemaPath" type="xs:string" />
+        <xs:element name="Consumers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Consumer" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="DataService">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="File">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Path" type="xs:string" />
+                                <xs:element name="Delete" type="xs:boolean" />
+                                <xs:element name="Filter" type="xs:string" />
+                                <xs:element name="Timeout" type="xs:unsignedByte" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Queue">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Inbox" type="xs:string" />
+                                <xs:element name="Outbox" type="xs:string" />
+                                <xs:element name="Success" type="xs:string" />
+                                <xs:element name="Fail" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Transport">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Out" type="Transport" />
+                                <xs:element name="Success" type="Transport" />
+                                <xs:element name="Fail" type="Transport" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Culture" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="Name" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Letters">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Letter" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                  </xs:sequence>
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Frequency" type="xs:float" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="Transport">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="File" />
+      <xs:enumeration value="Queue" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

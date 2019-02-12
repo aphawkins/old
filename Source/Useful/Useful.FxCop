@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="10.0" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>False</SharedProject>
+  <Stylesheet Apply="False">c:\program files\microsoft fxcop 1.312\Xml\FxCopReport.Xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>100</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>10</RuleExceptionsThreshold>
+  <Spelling Locale="en-GB" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <AssemblyReferenceDirectories>
+   <Directory>C:\Users\Andy\Documents\wwwroot\Useful.Web.Form\bin\</Directory>
+   <Directory>C:\Users\Andy\Documents\Programming\Useful\Useful\bin\Debug\</Directory>
+   <Directory>C:\Users\Andy\Documents\Programming\Useful\Useful.Windows\bin\Debug\</Directory>
+   <Directory>C:\Users\Andy\Documents\Programming\Useful\Useful.Windows.Forms\bin\Debug\</Directory>
+   <Directory>C:\Users\Andy\Documents\Programming\Useful\Useful.Windows.Forms.Controls\bin\Debug\</Directory>
+   <Directory>C:\Users\Andy\Documents\Programming\Useful\Useful.Web.Controls\bin\Debug\</Directory>
+   <Directory>C:\Users\Andy\Documents\Programming\Useful\Useful.Services\bin\Debug\</Directory>
+   <Directory>C:\Users\Andy\Documents\Programming\Useful\Useful.Services.Clients\bin\Debug\</Directory>
+   <Directory>C:\Users\Andy\Documents\Programming\Useful\Useful.Console\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Programming\Useful\Useful.Challenges\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Programming\Useful\Useful.Console\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Programming\Useful\Useful.DataServices.Console\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Programming\Useful\Useful.DataServices\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Programming\Useful\Useful.Security.Cryptography\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Programming\Useful\Useful.Windows\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Programming\Useful\Useful\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Visual Studio\Projects\Useful\Useful.Challenges.Console\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Visual Studio\Projects\Useful\Useful.Challenges\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Visual Studio\Projects\Useful\Useful.Console\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Visual Studio\Projects\Useful\Useful.Security.Cryptography\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Visual Studio\Projects\Useful\Useful.Windows\bin\Debug\</Directory>
+   <Directory>C:\Documents and Settings\Andy\My Documents\Visual Studio\Projects\Useful\Useful\bin\Debug\</Directory>
+   <Directory>C:\Users\Andy\Documents\Programming\Useful\Useful.Console.Client\bin\Debug\</Directory>
+   <Directory>D:\Documents and Settings\Andy\My Documents\Programming\Useful\Useful.Console\bin\Debug\</Directory>
+   <Directory>D:\Documents and Settings\Andy\My Documents\Programming\Useful\Useful.Windows\bin\Debug\</Directory>
+   <Directory>D:\Documents and Settings\Andy\My Documents\Programming\Useful\Useful\bin\Debug\</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="Z:\Programming\Useful\Useful\bin\Debug\Useful.exe" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="False">
+    <Rule Name="CallBaseClassMethodsOnISerializableTypes" Enabled="True" />
+    <Rule Name="CollectionPropertiesShouldBeReadOnly" Enabled="True" />
+    <Rule Name="DisposableFieldsShouldBeDisposed" Enabled="True" />
+    <Rule Name="DisposableTypesShouldDeclareFinalizer" Enabled="True" />
+    <Rule Name="DoNotCallOverridableMethodsInConstructors" Enabled="True" />
+    <Rule Name="DoNotDecreaseInheritedMemberVisibility" Enabled="True" />
+    <Rule Name="DoNotMarkEnumsWithFlags" Enabled="True" />
+    <Rule Name="DoNotMarkServicedComponentsWithWebMethod" Enabled="True" />
+    <Rule Name="DoNotRaiseExceptionsInExceptionClauses" Enabled="True" />
+    <Rule Name="DoNotRaiseReservedExceptionTypes" Enabled="True" />
+    <Rule Name="FinalizersShouldBeProtected" Enabled="True" />
+    <Rule Name="FinalizersShouldCallBaseClassFinalizer" Enabled="True" />
+    <Rule Name="ImplementISerializableCorrectly" Enabled="True" />
+    <Rule Name="ImplementSerializationConstructors" Enabled="True" />
+    <Rule Name="ImplementSerializationMethodsCorrectly" Enabled="True" />
+    <Rule Name="InitializeValueTypeStaticFieldsInline" Enabled="True" />
+    <Rule Name="InstantiateArgumentExceptionsCorrectly" Enabled="True" />
+    <Rule Name="MarkAllNonSerializableFields" Enabled="True" />
+    <Rule Name="MarkISerializableTypesWithSerializable" Enabled="True" />
+    <Rule Name="MarkWindowsFormsEntryPointsWithStaThread" Enabled="True" />
+    <Rule Name="MembersShouldDifferByMoreThanReturnType" Enabled="True" />
+    <Rule Name="NonConstantFieldsShouldNotBeVisible" Enabled="True" />
+    <Rule Name="OperationsShouldNotOverflow" Enabled="True" />
+    <Rule Name="OperatorOverloadsHaveNamedAlternates" Enabled="True" />
+    <Rule Name="OperatorsShouldHaveSymmetricalOverloads" Enabled="True" />
+    <Rule Name="OverloadOperatorEqualsOnOverridingValueTypeEquals" Enabled="True" />
+    <Rule Name="OverrideEqualsOnOverloadingOperatorEquals" Enabled="True" />
+    <Rule Name="OverrideGetHashCodeOnOverridingEquals" Enabled="True" />
+    <Rule Name="PassSystemUriObjectsInsteadOfStrings" Enabled="True" />
+    <Rule Name="ProvideDeserializationMethodsForOptionalFields" Enabled="True" />
+    <Rule Name="RethrowToPreserveStackDetails" Enabled="True" />
+    <Rule Name="UseManagedEquivalentsOfWin32Api" Enabled="True" />
+    <Rule Name="UseParamsForVariableArguments" Enabled="True" />
+   </RuleFile>
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="10.0">
+  <Targets>
+   <Target Name="Z:\Programming\Useful\Useful\bin\Debug\Useful.exe">
+    <Modules>
+     <Module Name="useful.exe">
+      <Namespaces>
+       <Namespace Name="Useful">
+        <Types>
+         <Type Name="Letters">
+          <Members>
+           <Member Name="#ObjectInvariant()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-12 10:45:34Z">
+              <Issue>
+               <Item>'Letters.ObjectInvariant()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Useful.Windows.Forms">
+        <Types>
+         <Type Name="CryptographyForm">
+          <Members>
+           <Member Name="#ObjectInvariant()">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-10-12 10:45:34Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'CryptographyForm.ObjectInvariant()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Useful.Windows.Forms.Controls.Cryptography">
+        <Types>
+         <Type Name="CipherSettingsControl">
+          <Members>
+           <Member Name="#ObjectInvariant()">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-10-12 10:45:34Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'CipherSettingsControl.ObjectInvariant()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+    <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<results>
+  <my-ns:param xmlns:my-ns="http://my.com">first-name</my-ns:param>
+  <my-ns2:param2 xmlns:my-ns2="http://my.com2"></my-ns2:param2>
+  <p1></p1>
+  <p2></p2>
+  <p3></p3>
+</results>
