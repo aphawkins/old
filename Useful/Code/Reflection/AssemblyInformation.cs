@@ -5,54 +5,33 @@
 // <summary>This class uses the System.Reflection.Assembly class to access assembly meta-data.</summary>
 //-----------------------------------------------------------------------
 
-namespace BookMan
+namespace Useful
 {
-    using System;
-    using System.Reflection;
-    using System.Runtime.InteropServices;
+	using System;
+	using System.Diagnostics.Contracts;
+	using System.Reflection;
+	using System.Runtime.InteropServices;
 
     /// <summary>
     /// Accesses information from Assembly Attributes.
     /// </summary>
     public static class AssemblyInformation
     {
-        #region Fields
-        #endregion
-
-        #region ctor
-        ///// <summary>
-        ///// Initializes a new instance of the AssemblyInformation class. 
-        ///// </summary>
-        //static AssemblyInformation()
-        //{
-        //    ExecutingAssembly = Assembly.GetExecutingAssembly();
-        //    AssemblyName = Assembly.GetExecutingAssembly().GetName().Name;
-        //    AssemblyFullyQualifiedName = Assembly.GetExecutingAssembly().GetName().FullName;
-        //    CodeBase = new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath;
-        //    Location = Assembly.GetExecutingAssembly().Location;
-        //    Copyright = GetCopyright();
-        //    Company = GetCompany();
-        //    Description = GetDescription();
-        //    Product = GetProduct();
-        //    Title = GetTitle();
-        //    Version = Assembly.GetExecutingAssembly().GetName().Version;
-        //    Guid = GetGuid();
-        //}
-        #endregion
-
-        #region Methods
         /// <summary>
         /// Gets the executing assembly.
         /// </summary>
+        /// <returns>The current calling assembly.</returns>
         public static Assembly This()
         {
+			Contract.Ensures(Contract.Result<Assembly>() != null);
+
             return Assembly.GetCallingAssembly();
         }
 
         /// <summary>
         /// Gets the assembly's name.
         /// </summary>
-        /// <value>Gets the assembly's name.</value>
+        /// <returns>Gets the assembly's name.</returns>
         public static string AssemblyName()
         {
             return Assembly.GetCallingAssembly().GetName().Name;
@@ -64,6 +43,8 @@ namespace BookMan
         /// <value>The assembly's fully qualified name.</value>
         public static string AssemblyFullyQualifiedName()
         {
+			Contract.Ensures(Contract.Result<string>() != null);
+
             return Assembly.GetCallingAssembly().GetName().FullName;
         }
 
@@ -73,6 +54,8 @@ namespace BookMan
         /// <value>The assembly's code base.</value>
         public static string CodeBase()
         {
+			Contract.Ensures(Contract.Result<string>() != null);
+
             return new Uri(Assembly.GetCallingAssembly().CodeBase).LocalPath;
         }
 
@@ -82,6 +65,8 @@ namespace BookMan
         /// <value>The assembly's location.</value>
         public static string Location()
         {
+			Contract.Ensures(Contract.Result<string>() != null);
+
             return Assembly.GetCallingAssembly().Location;
         }
 
@@ -95,9 +80,9 @@ namespace BookMan
         }
 
         /// <summary>
-        /// Get the copright information.
+        /// Get the copyright information.
         /// </summary>
-        /// <returns>The copright information.</returns>
+        /// <returns>The copyright information.</returns>
         public static string Copyright()
         {
             AssemblyCopyrightAttribute attribute = GetCustomAttribute<AssemblyCopyrightAttribute>();
@@ -166,7 +151,5 @@ namespace BookMan
 
             return (T)attributes[0];
         }
-
-        #endregion
     }
 }
