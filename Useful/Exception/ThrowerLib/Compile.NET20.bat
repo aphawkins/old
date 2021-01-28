@@ -1,1 +1,0 @@
-Compile.bat NET20
