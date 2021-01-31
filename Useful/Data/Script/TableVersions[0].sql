@@ -1,7 +1,0 @@
-﻿CREATE TABLE [Versions]
-(
-	[Id] COUNTER NOT NULL PRIMARY KEY,
-	[Type] NVARCHAR(50),
-	[Number] NVARCHAR(50),
-	[Modified] DATETIME NOT NULL DEFAULT NOW()
-)

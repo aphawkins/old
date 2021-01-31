@@ -1,8 +1,0 @@
-﻿CREATE TABLE [Rooms]
-(
-	[Id] COUNTER NOT NULL PRIMARY KEY,
-	[Name] NVARCHAR(50),
-	[Beds] TINYINT,
-	[Sleeps] TINYINT,
-	[Modified] DATETIME NOT NULL DEFAULT NOW()
-)
