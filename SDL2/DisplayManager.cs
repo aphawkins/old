@@ -1,13 +1,12 @@
-﻿namespace MonoLife.Client
+﻿namespace SDL2
 {
     using System;
-    using SDL2;
 
     public class DisplayManager
     {
-        protected static IntPtr window;
+        protected static nint window;
         protected static uint windowID;
-        protected static IntPtr context;
+        protected static nint context;
         protected static bool isClosed = false;
 
         public static void CreateDisplay(string title, int width, int height)
@@ -60,7 +59,6 @@
 
         public static void DestoryDisplay()
         {
-            //SDL.SDL_GL_DeleteContext(context);
             SDL.SDL_DestroyWindow(window);
             SDL.SDL_Quit();
         }
